@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+      body {
+        background-color: #F0F0F0;
+      }
+      
+      .container {
+        margin: 0 auto;
+        width: 50%;
+        background-color: #FFFFFF;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px #AAAAAA;
+      }
+      
+      h1 {
+        text-align: center;
+
+      }
+      
+      .form-group {
+        margin-bottom: 10px;
+      }
+      
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      
+      input[type="text"], input[type="password"] {
+        /* text-align: center; */
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #AAAAAA;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+      
+      button[type="submit"] {
+        background-color: #4CAF50;
+        color: #FFFFFF;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      button[type="submit"]:hover {
+        background-color: #3E8E41;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      
+      <h1><img src="D:\Data Science MS Class\Software Engineering\Project\logo.jpeg" height="50" width="50"></h1>
+      <h1>Health Sure</h1>
+      <form >
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </body>
+</html>
