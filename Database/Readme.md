@@ -16,6 +16,6 @@
  * `Step 7` : Password is `admin123`  
  * `Step 8` : Click on `Test Connection`  
  * `Step 9` : Click `Ok`  
- * `Step 10` : You will see the Connection Successful message.
+ * `Step 10` : You will see the Connection Successful message and your connection is now established.
 
 *Please let me know if you see any connection issues..*

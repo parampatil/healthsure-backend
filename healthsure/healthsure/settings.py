@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-8un@t01767i0!koz(bk6a6-x9-7&jo#4bb%%cate(inpkwrv96
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['9e1a-2601-801-200-aa50-d084-d4ab-256d-65b6.ngrok.io']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'lin_lout',
     'dashboard',
     'allinone',
+    'rest_framework_simplejwt.token_blacklist',
+    'rest_framework_simplejwt',
+     'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +54,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 
@@ -149,6 +154,27 @@ STATIC_URL =  '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
+
+
+REST_FRAMEWORK = {
+
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ],
+
+
+    "DEFAULT_PERMISSION_CLASSES" : [
+        'rest_framework.permissions.IsAuthenticated', 
+     ],
+
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ]
+}
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_HEADERS = ['*']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
